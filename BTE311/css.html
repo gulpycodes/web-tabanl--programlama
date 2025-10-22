@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ders programı</title>
+</head>
+<body>
+    <h2>Görev 1: Tablolar</h2>
+
+    <h3>Tablo 1: Inline CSS</h3>
+    <table border="1" width="500">
+        <thead>
+            <tr>
+                <th>Gün</th>
+                <th>Ders 1 (09:00)</th>
+                <th>Ders 2 (10:00)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Pazartesi</td>
+                <td>Matematik</td>
+                <td>Türkçe</td>
+            </tr>
+            <tr>
+                <td>Salı</td>
+                <td>Fen Bilgisi</td>
+                <td>Sosyal Bilgiler</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Tablo 2: Internal CSS</h3>
+    <table class="internal-tablo" width="500">
+        <thead>
+            <tr>
+                <th>Gün</th>
+                <th>Ders 1 (09:00)</th>
+                <th>Ders 2 (10:00)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Pazartesi</td>
+                <td>Matematik</td>
+                <td>Türkçe</td>
+            </tr>
+            <tr>
+                <td>Salı</td>
+                <td>Fen Bilgisi</td>
+                <td>Sosyal Bilgiler</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Tablo 3: External CSS</h3>
+    <table class="external-tablo" width="500">
+        <thead>
+            <tr>
+                <th>Gün</th>
+                <th>Ders 1 (09:00)</th>
+                <th>Ders 2 (10:00)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Pazartesi</td>
+                <td>Matematik</td>
+                <td>Türkçe</td>
+            </tr>
+            <tr>
+                <td>Salı</td>
+                <td>Fen Bilgisi</td>
+                <td>Sosyal Bilgiler</td>
+            </tr>
+        </tbody>
+    </table>
+    <h3>Tablo 1: Inline CSS</h3>
+<table style="width: 500px; border-collapse: collapse; font-family: Arial, sans-serif;">
+    <thead style="background-color: #4CAF50; color: white;">
+        <tr>
+            <th style="padding: 10px; border: 1px solid #ddd;">Gün</th>
+            <th style="padding: 10px; border: 1px solid #ddd;">Ders 1 (09:00)</th>
+            <th style="padding: 10px; border: 1px solid #ddd;">Ders 2 (10:00)</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td style="padding: 10px; border: 1px solid #ddd; text-align: center;">Pazartesi</td>
+            <td style="padding: 10px; border: 1px solid #ddd; text-align: center;">Matematik</td>
+            <td style="padding: 10px; border: 1px solid #ddd; text-align: center;">Türkçe</td>
+        </tr>
+        <tr>
+            <td style="padding: 10px; border: 1px solid #ddd; text-align: center;">Salı</td>
+            <td style="padding: 10px; border: 1px solid #ddd; text-align: center;">Fen Bilgisi</td>
+            <td style="padding: 10px; border: 1px solid #ddd; text-align: center;">Sosyal Bilgiler</td>
+        </tr>
+    </tbody>
+</table>
+<link rel="stylesheet" href="stil.css">
+<style>
+        /* 2. Tablo (Internal) için stiller */
+        .internal-tablo {
+            border-collapse: collapse; /* Çerçeveleri birleştir */
+            font-family: 'Georgia', serif;
+        }
+        .internal-tablo th {
+            background-color: #008CBA; /* Mavi başlık */
+            color: white;
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+        .internal-tablo td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: center;
+        }
+        .internal-tablo tbody tr:nth-child(even) {
+            background-color: #f2f2f2; /* Çift sıradaki satırlara gri arka plan */
+        }
+        /* ... tablo stilleri ... */
+        
+        /* Görev 2 (Daireler) için stiller */
+        .daire-container {
+            position: relative; /* İçindeki dairelerin buna göre konumlanması için */
+            width: 400px;
+            height: 300px;
+            margin-top: 50px;
+        }
+
+        .daire {
+            /* Daireleri daire yapar */
+            border-radius: 50%; 
+            
+            /* Boyut */
+            width: 200px;
+            height: 200px;
+            
+            /* Konumlandırma */
+            position: absolute; 
+            
+            /* Renklerin karışması için şeffaflık */
+            opacity: 0.7; 
+        }
+
+        #daire1 {
+            background-color: #FF6347; /* Kırmızımsı */
+            top: 0;
+            left: 0;
+        }
+
+        #daire2 {
+            background-color: #FFD700; /* Sarı */
+            top: 0;
+            left: 120px; /* Birinci daire ile üst üste biner */
+        }
+
+        #daire3 {
+            background-color: #1E90FF; /* Mavi */
+            top: 70px; /* Diğer dairelerle üst üste biner */
+            left: 60px;
+        }
+    </style>
+    <h2>Görev 2: Venn Şeması Daireleri</h2>
+    <div class="daire-container">
+        <div class="daire" id="daire1"></div>
+        <div class="daire" id="daire2"></div>
+        <div class="daire" id="daire3"></div>
+    </div>
+</body>
+</html>
